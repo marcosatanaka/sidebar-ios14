@@ -16,11 +16,10 @@ class SidebarViewController: UIViewController {
         configureHierarchy()
         configureDataSource()
         addNavigationButtons()
+        setInitialSecondaryView()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        // The default secondary view controller: Listen Now
+    private func setInitialSecondaryView() {
         collectionView.selectItem(at: IndexPath(row: 0, section: 0),
                                   animated: false,
                                   scrollPosition: UICollectionView.ScrollPosition.centeredVertically)
@@ -52,9 +51,16 @@ extension SidebarViewController {
 
     private func configureHierarchy() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
-        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.delegate = self
+
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(collectionView)
+        NSLayoutConstraint.activate([
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
     
     private func configureDataSource() {
