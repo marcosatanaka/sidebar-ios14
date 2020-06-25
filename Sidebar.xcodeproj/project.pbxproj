@@ -11,8 +11,13 @@
 		6C08665324A2FB91009174A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C08665224A2FB91009174A0 /* SceneDelegate.swift */; };
 		6C08665A24A2FB94009174A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C08665924A2FB94009174A0 /* Assets.xcassets */; };
 		6C08665D24A2FB94009174A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C08665B24A2FB94009174A0 /* LaunchScreen.storyboard */; };
-		6C08666624A2FC0B009174A0 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C08666424A2FC0B009174A0 /* ContentViewController.swift */; };
 		6C08666724A2FC0B009174A0 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C08666524A2FC0B009174A0 /* SidebarViewController.swift */; };
+		B143594F24A4C35600D6C950 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143594E24A4C35600D6C950 /* TabBarController.swift */; };
+		B143595224A4C40400D6C950 /* ListenNowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143595124A4C40400D6C950 /* ListenNowViewController.swift */; };
+		B143595424A4C41400D6C950 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143595324A4C41400D6C950 /* BrowseViewController.swift */; };
+		B143595624A4C41D00D6C950 /* RadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143595524A4C41D00D6C950 /* RadioViewController.swift */; };
+		B143595824A4C42400D6C950 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143595724A4C42400D6C950 /* LibraryViewController.swift */; };
+		B143595A24A4C42A00D6C950 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143595924A4C42A00D6C950 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +27,13 @@
 		6C08665924A2FB94009174A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C08665C24A2FB94009174A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C08665E24A2FB94009174A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6C08666424A2FC0B009174A0 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		6C08666524A2FC0B009174A0 /* SidebarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
+		B143594E24A4C35600D6C950 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		B143595124A4C40400D6C950 /* ListenNowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenNowViewController.swift; sourceTree = "<group>"; };
+		B143595324A4C41400D6C950 /* BrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
+		B143595524A4C41D00D6C950 /* RadioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioViewController.swift; sourceTree = "<group>"; };
+		B143595724A4C42400D6C950 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		B143595924A4C42A00D6C950 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +69,25 @@
 				6C08665024A2FB91009174A0 /* AppDelegate.swift */,
 				6C08665224A2FB91009174A0 /* SceneDelegate.swift */,
 				6C08666524A2FC0B009174A0 /* SidebarViewController.swift */,
-				6C08666424A2FC0B009174A0 /* ContentViewController.swift */,
+				B143595024A4C3EE00D6C950 /* Compact */,
 				6C08665924A2FB94009174A0 /* Assets.xcassets */,
 				6C08665B24A2FB94009174A0 /* LaunchScreen.storyboard */,
 				6C08665E24A2FB94009174A0 /* Info.plist */,
 			);
 			path = Sidebar;
+			sourceTree = "<group>";
+		};
+		B143595024A4C3EE00D6C950 /* Compact */ = {
+			isa = PBXGroup;
+			children = (
+				B143594E24A4C35600D6C950 /* TabBarController.swift */,
+				B143595124A4C40400D6C950 /* ListenNowViewController.swift */,
+				B143595324A4C41400D6C950 /* BrowseViewController.swift */,
+				B143595524A4C41D00D6C950 /* RadioViewController.swift */,
+				B143595724A4C42400D6C950 /* LibraryViewController.swift */,
+				B143595924A4C42A00D6C950 /* SearchViewController.swift */,
+			);
+			path = Compact;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,10 +159,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B143595A24A4C42A00D6C950 /* SearchViewController.swift in Sources */,
 				6C08665124A2FB91009174A0 /* AppDelegate.swift in Sources */,
-				6C08666624A2FC0B009174A0 /* ContentViewController.swift in Sources */,
+				B143595624A4C41D00D6C950 /* RadioViewController.swift in Sources */,
 				6C08665324A2FB91009174A0 /* SceneDelegate.swift in Sources */,
+				B143594F24A4C35600D6C950 /* TabBarController.swift in Sources */,
+				B143595224A4C40400D6C950 /* ListenNowViewController.swift in Sources */,
 				6C08666724A2FC0B009174A0 /* SidebarViewController.swift in Sources */,
+				B143595824A4C42400D6C950 /* LibraryViewController.swift in Sources */,
+				B143595424A4C41400D6C950 /* BrowseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

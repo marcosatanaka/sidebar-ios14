@@ -4,7 +4,11 @@ class SidebarViewController: UIViewController {
     
     private var dataSource: UICollectionViewDiffableDataSource<Section, Item>! = nil
     private var collectionView: UICollectionView! = nil
-    
+    private var secondaryViewControllers = [UINavigationController(rootViewController: ListenNowViewController()),
+                                            UINavigationController(rootViewController: BrowseViewController()),
+                                            UINavigationController(rootViewController: RadioViewController()),
+                                            UINavigationController(rootViewController: SearchViewController())]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Music"
@@ -12,6 +16,14 @@ class SidebarViewController: UIViewController {
         configureHierarchy()
         configureDataSource()
         addNavigationButtons()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // The default secondary view controller: Listen Now
+        collectionView.selectItem(at: IndexPath(row: 0, section: 0),
+                                  animated: false,
+                                  scrollPosition: UICollectionView.ScrollPosition.centeredVertically)
     }
 
     private func addNavigationButtons() {
@@ -40,6 +52,7 @@ extension SidebarViewController {
     private func configureHierarchy() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        collectionView.delegate = self
         view.addSubview(collectionView)
     }
     
@@ -101,6 +114,17 @@ extension SidebarViewController {
                 dataSource.apply(sectionSnapshot, to: section)
             }
         }
+    }
+
+}
+
+// MARK: - UICollectionViewDelegate
+
+extension SidebarViewController: UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard indexPath.section == 0 else { return }
+        splitViewController?.setViewController(secondaryViewControllers[indexPath.row], for: .secondary)
     }
 
 }

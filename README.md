@@ -10,7 +10,7 @@ It contains just the code required to create the UI, and it was based on the App
 
 - [ ] Customize the accent color.
 - [ ] Maintain selection when contracting/expanding a section.
-- [ ] Revert to tab bar based navigation on compact layouts, and on the iPhone.
+- [x] Revert to tab bar based navigation on compact layouts, and on the iPhone.
 
 ## Documentation links
 

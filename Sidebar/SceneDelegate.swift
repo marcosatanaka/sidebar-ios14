@@ -14,7 +14,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             splitViewController.preferredDisplayMode = .oneBesideSecondary
             splitViewController.presentsWithGesture = false
             splitViewController.preferredSplitBehavior = .tile
-            splitViewController.viewControllers = [SidebarViewController(), ContentViewController()]
+
+            splitViewController.setViewController(SidebarViewController(), for: .primary)
+            splitViewController.setViewController(ListenNowViewController(), for: .secondary)
+            splitViewController.setViewController(TabBarController(), for: .compact)
+
             window.rootViewController = splitViewController
             self.window = window
             window.makeKeyAndVisible()
