@@ -24,6 +24,7 @@ class SidebarViewController: UIViewController {
         collectionView.selectItem(at: IndexPath(row: 0, section: 0),
                                   animated: false,
                                   scrollPosition: UICollectionView.ScrollPosition.centeredVertically)
+        splitViewController?.setViewController(secondaryViewControllers[0], for: .secondary)
     }
 
     private func addNavigationButtons() {
