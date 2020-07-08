@@ -8,9 +8,19 @@ It contains just the code required to create the UI, and it was based on the App
 
 ## TO-DO
 
-- [ ] Customize the accent color.
-- [ ] Maintain selection when contracting/expanding a section.
+- [ ] Maintain the selection when contracting/expanding a section.
+- [ ] Restore the state of a view controller when changing between regular and compact mode.
 - [x] Revert to tab bar based navigation on compact layouts, and on the iPhone.
+
+## Known bugs
+
+Starting the app in compact mode, and then changing it to regular mode causes the following error:
+
+```
+Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: 'Unexpected view controller change in Secondary column for expanding <UISplitViewController: 0x10550a630>'
+```
+
+I have a [question for this on the Apple Developer Forums](https://developer.apple.com/forums/thread/653562), I'm not sure if this is a bug in the API, or if I'm using it incorrectly.
 
 ## Documentation links
 
