@@ -30,6 +30,7 @@ I have a [question for this on the Apple Developer Forums](https://developer.app
 ## WWDC20 videos
 
 - [Design for iPad](https://developer.apple.com/videos/play/wwdc2020/10206/)
+- [Build for iPad](https://developer.apple.com/videos/play/wwdc2020/10105/)
 - [Advances in UICollectionView](https://developer.apple.com/videos/play/wwdc2020/10097/)
 - [Advances in diffable data sources](https://developer.apple.com/videos/play/wwdc2020/10045/)
 - [Lists in UICollectionView](https://developer.apple.com/videos/play/wwdc2020/10026/)
