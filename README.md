@@ -6,6 +6,10 @@ This is a sample project demonstrating how to implement the new Sidebar UI on an
 
 It contains just the code required to create the UI, and it was based on the Apple's sample project  [Implementing Modern Collection Views](https://developer.apple.com/documentation/uikit/views_and_controls/collection_views/implementing_modern_collection_views).
 
+## Multiplatform with SwiftUI
+
+Check out [this repository](https://github.com/marcosatanaka/multiplatform-sidebar-swiftui) to see how to do this for a multiplatform app (iOS, iPadOS, macOS) built with SwiftUI.
+
 ## TO-DO
 
 - [ ] Maintain the selection when contracting/expanding a section.
